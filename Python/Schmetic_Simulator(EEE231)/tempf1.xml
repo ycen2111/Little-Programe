@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<Class>
+	<globalData>
+	<lastNodeID lastNodeID="2"/>
+	<lastArcID lastArcID="2"/>
+	</globalData>
+	<nodeClass>
+	<node ID="1">
+	<nX>0</nX>
+	<nY>0</nY>
+	<nRadius>25</nRadius>
+	<nText>a</nText>
+	<nUnit>A</nUnit>
+	<nValue>2</nValue>
+	</node>
+	<node ID="2">
+	<nX>10</nX>
+	<nY>20</nY>
+	<nRadius>25</nRadius>
+	<nText>b</nText>
+	<nUnit>V</nUnit>
+	<nValue>5</nValue>
+	</node>
+	</nodeClass>
+	<arcClass>
+	<arc ID="1">
+	<aStartNodeID>1</aStartNodeID>
+	<aMidX>0</aMidX>
+	<aMidY>0</aMidY>
+	<aEndNodeID>2</aEndNodeID>
+	<aUnit>A</aUnit>
+	<aResis>1</aResis>
+	</arc>
+	<arc ID="2">
+	<aStartNodeID>2</aStartNodeID>
+	<aMidX>50</aMidX>
+	<aMidY>50</aMidY>
+	<aEndNodeID>1</aEndNodeID>
+	<aUnit>mA</aUnit>
+	<aResis>2</aResis>
+	</arc>
+	</arcClass>
+	</Class>

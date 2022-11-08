@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/DigitDisplay.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DigitDisplay
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/Nibble2SevenSeg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Nibble2SevenSeg
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/state_change.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module state_change_logic
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sources_1/new/up_count_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module up_count_unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/assignment2/assignment2.srcs/sim_1/new/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

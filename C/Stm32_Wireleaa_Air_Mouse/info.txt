@@ -1,0 +1,9 @@
+undergraduate final project
+based on STM32 chip, STM32 cube MX, Keil 5, touch sensor, RF chips, gyroscope
+have Kalman filter, average filter, FIFO
+
+receiver_HAL is programe in receiver part. 
+includes usart, SPI (for RF chip), USB driver (Mouse driver)
+
+wireless is progame in translate part.
+inludes usart, SPI (for RF chip), IIC (for MPU6050)

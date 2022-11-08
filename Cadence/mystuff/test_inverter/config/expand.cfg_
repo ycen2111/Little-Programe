@@ -1,0 +1,17 @@
+//Revision 4
+//NOTE
+// Default austriamicrosystems template for spectre
+//END_NOTE
+
+config test_inverter;
+design mystuff.test_inverter:schematic;
+liblist myLib;
+
+viewlist av_extracted, spectre, cmos_sch, schematic, veriloga, ahdl;
+stoplist spectre;
+
+
+cell mystuff.inverter binding :schematic;
+
+
+endconfig

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright : 2012 Freescale, Inc. All Rights Reserved.
+
+  This configuration file is a standard interchange file that's format is maintained
+  by Freescale, Inc. The configuration file is a derivative work
+  of the Processor Expert Software technology licensed for use by customers
+  as defined as SOFTWARE in the product's End User License Agreement. This file
+  and format are free to use and distribute for read-only purposes. You do not have
+  the right to create these files or modify this format or use for any purposes other
+  than interchange with the Processor Expert Software technology.
+
+  THIS SOFTWARE IS PROVIDED "AS IS".
+
+  NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT
+  LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE APPLY TO THIS SOFTWARE. IN NO EVENT WILL FREESCALE BE LIABLE, WHETHER
+  IN CONTRACT, TORT, OR OTHERWISE, FOR ANY INCIDENTAL, SPECIAL, INDIRECT,
+  CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR
+  ANY LOSS OF USE, LOSS OF TIME, INCONVENIENCE, COMMERCIAL LOSS, OR LOST PROFITS,
+  SAVINGS, OR REVENUES TO THE FULL EXTENT SUCH MAY BE DISCLAIMED BY LAW.
+
+-->
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ProjectInfoDescription.xsd">
+  <PROCESSOR>
+    <DeviceID>MKL25Z128xxx4</DeviceID>
+    <CoreNum>1</CoreNum>
+    <Cores>
+      <Core>
+        <CoreSet>Cortex-M0+</CoreSet>
+      </Core>
+    </Cores>
+    <SRAMsize>16k</SRAMsize>
+    <FLASHsize>128k</FLASHsize>
+  </PROCESSOR>
+  <PATHS>
+    <LinkerCommandFile>C:\EEE226\ela20yc Assignment 1\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
+    <IncludePaths>
+      <Path>C:\EEE226\ela20yc Assignment 1\Sources\TSS\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Static_Code\IO_Map\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Sources\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Generated_Code\</Path>
+    </IncludePaths>
+    <SourceCodePaths>
+      <Path>C:\EEE226\ela20yc Assignment 1\Generated_Code\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Project_Settings\Startup_Code\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Sources\</Path>
+      <Path>C:\EEE226\ela20yc Assignment 1\Sources\TSS\</Path>
+    </SourceCodePaths>
+    <LibPaths>
+      <Path>C:\EEE226\ela20yc Assignment 1\Sources\TSS\</Path>
+    </LibPaths>
+  </PATHS>
+  <FILES>
+    <GeneratedCs>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\BLUE_LED.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\Cpu.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\GREEN_LED.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\PE_LDD.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\RED_LED.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TSS1.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TU1.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TU2.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\Vectors.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\Events.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_Freemaster.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_Sensor.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorGPIO.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSI.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSIL.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SystemSetupData.c</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\main.c</PathName>
+    </GeneratedCs>
+    <GeneratedHs>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\BLUE_LED.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\Cpu.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\GREEN_LED.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\IO_Map.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\PE_Const.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\PE_Error.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\PE_LDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\PE_Types.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\RED_LED.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TSS1.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TU1.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Generated_Code\TU2.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\Events.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_API.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_DataTypes.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_GPIO.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_Sensor.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorGPIO.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorGPIO_def.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSI.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSIL.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSIL_def.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SensorTSI_def.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_StatusCodes.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_SystemSetupVal.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS\TSS_Timer.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\TSS_SystemSetup.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Sources\derivative.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\IO_Map\MKL25Z4.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\ADC_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\CMP_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\COP_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\DAC_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\DMAMUX_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\DMA_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\FTFA_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\GPIO_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\I2C_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\LPTMR_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\MCG_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\MCM_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\OSC_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\PDD_Types.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\PIT_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\PORT_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\RTC_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\SIM_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\SPI_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\SysTick_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\TPM_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\TSI_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\UART0_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\UART_PDD.h</PathName>
+      <PathName>C:\EEE226\ela20yc Assignment 1\Static_Code\PDD\USB_PDD.h</PathName>
+    </GeneratedHs>
+    <Libraries>
+      <PathName>"TSS_KXX_M0"</PathName>
+    </Libraries>
+  </FILES>
+  <OPTIONS>
+  </OPTIONS>
+</export>

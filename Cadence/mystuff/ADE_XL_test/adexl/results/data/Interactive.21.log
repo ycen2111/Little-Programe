@@ -1,0 +1,16 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Tue Nov  8 15:23:06 2022 
+Best design point: 1
+Design specs: 
+	mystuff:sweep_vds:1	corner	Nominal - 
+	value(IS("/MN0/D") 2.5)		13.42m
+Design parameters: 
+	vds		5
+	vgs		5
+
+Interactive.21
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.21 completed. 
+Current time: Tue Nov  8 15:23:11 2022 

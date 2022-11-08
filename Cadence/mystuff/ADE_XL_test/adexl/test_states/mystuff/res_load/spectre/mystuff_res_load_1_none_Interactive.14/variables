@@ -1,0 +1,13 @@
+savedComponent = (let
+(tmp1)
+(unless tmp1
+tmp1 = make_sevVariableStruct()
+)
+(unless tmp1
+tmp1 = (ncons nil)
+)
+tmp1->name = "Gain"
+tmp1->expression = "v(\"/Vout1\" ?result \"tran\")/v(\"/Vin\" ?result \"tran\")"
+tmp1->index = 1
+list(tmp1)
+)

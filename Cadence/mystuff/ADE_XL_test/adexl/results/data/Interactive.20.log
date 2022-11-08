@@ -1,0 +1,16 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Wed Oct 26 10:37:19 2022 
+Best design point: 1
+Design specs: 
+	mystuff:res_load:1	corner	Nominal - 
+	Gain		35.16	No
+Design parameters: 
+	vds		5
+	vgs		5
+
+Interactive.20
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.20 completed. 
+Current time: Wed Oct 26 10:37:26 2022 

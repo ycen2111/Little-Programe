@@ -1,0 +1,5 @@
+undergraduate year 2 group course work
+I mainly focus on GUI varying changing and transportation
+
+using Qt5
+a circuit simulation programe, based on note analysis

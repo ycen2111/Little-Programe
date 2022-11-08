@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      s2314951
+HostName                       vlx06.see.ed.ac.uk
+ProcessIdentifier              4187784
+ProcessCreationTime_UTC        1667927518
+ProcessCreationTime_Readable   Tue Nov  8 17:11:58 2022 GMT
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/s2314951/AVLSIA/mystuff/inverter/layout/layout.oa.cdslck
+TimeEditLocked                 Tue Nov  8 17:12:36 2022 GMT

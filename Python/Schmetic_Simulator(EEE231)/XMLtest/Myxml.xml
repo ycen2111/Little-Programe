@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+    <fname>Terry</fname>
+    <lname>Tan</lname>
+    <home>HK</home>
+    <expertise name="XML"/>
+    <expertise name="Python"/>
+    <expertise name="Test"/>
+    <expertise name="lol"/>
+</employee>

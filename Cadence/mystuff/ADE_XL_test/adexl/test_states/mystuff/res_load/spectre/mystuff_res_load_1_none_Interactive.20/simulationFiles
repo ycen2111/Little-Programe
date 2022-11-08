@@ -1,0 +1,19 @@
+EVcdFile ""
+EVcdInfoFile ""
+VcdFile ""
+VcdInfoFile ""
+VectorFile nil
+allDefinitionFiles ((t "/eda/dkits/ams_410dev/spectre/c35/soac/soac.scs"))
+allDspfFiles nil
+allIncludedPaths nil
+allPspiceFiles nil
+allSpefFiles nil
+allStimulusFiles nil
+allVectorFiles nil
+definitionFiles ("/eda/dkits/ams_410dev/spectre/c35/soac/soac.scs")
+dspfFile nil
+hlcheck "off"
+includePath ""
+pspiceFile nil
+spefFile nil
+stimulusFile nil

@@ -1,0 +1,5 @@
+undergraduate year 2 assignment
+using KL25Z board, and its touch pad
+
+remember random color. green touch left part, yellow in middle part, red in right part
+try to remember as many color as you can

@@ -1,0 +1,6 @@
+undergraduate升postgraduate暑假实习项目
+使用了easyGUI, openpyxl, PDFplumber
+使用了virtualenv分割环境和pyinstaller打包程序
+
+ExcelMerging是输入多个表格后选取，查找，对比，递归出需要的整合数据
+OKR是从PDF中提取对应的OKR list，输出为excel

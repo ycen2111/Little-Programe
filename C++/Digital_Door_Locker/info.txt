@@ -1,0 +1,8 @@
+based on NPX MKL25Z chip
+coursework in undergraduate year 2
+
+can set, change, check password
+have rolling words on screen
+have second password as a backup od password
+
+group work, but almost was done by myself

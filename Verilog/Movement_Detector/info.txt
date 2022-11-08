@@ -1,0 +1,5 @@
+undergrduate year 2 assignment
+
+a movement detect alarm
+it will count 20s after detecting movement
+if not receive correct password, it will beep much loader until get correct password

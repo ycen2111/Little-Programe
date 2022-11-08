@@ -1,0 +1,3 @@
+undergraduate year 3 assignment
+
+using Fourier analysis and low pass filter, to get clear signal result
