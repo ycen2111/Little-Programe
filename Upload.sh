@@ -7,4 +7,4 @@ fi
 
 echo "Done"
 echo "Have a nice day :)"
-sleep 2
+sleep 1
