@@ -1,0 +1,16 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Dec  5 18:35:29 2022 
+Best design point: 1
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		10K
+
+Interactive.0
+Number of points completed: 20
+Number of simulation errors: 0
+Interactive.0 completed. 
+Current time: Mon Dec  5 18:36:46 2022 

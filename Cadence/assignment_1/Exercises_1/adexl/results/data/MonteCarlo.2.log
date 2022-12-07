@@ -1,0 +1,28 @@
+Starting Monte Carlo Sampling...
+
+Current time: Mon Dec  5 10:45:18 2022 
+MonteCarlo.2
+Number of points completed: 100
+Number of simulation errors: 300
+MonteCarlo.2 completed. 
+Current time: Mon Dec  5 10:47:30 2022 
+Monte Carlo Sampling yield summary:
+Number of spec values are in this yield data: 4
+assignment_1:Exercises_1:1	Nominal - 
+	Mag:	Yield	0%
+		Min 0	Max 0	Mean 0	Number of errors 100
+assignment_1:Exercises_1:1	Nominal - 
+	Power:	Yield	100%
+		Min -8.32998e-06	Max -8.24253e-06	Mean -8.28945e-06	Number of errors 0
+assignment_1:Exercises_1:1	Nominal - 
+	bandwidth:	Yield	0%
+		Min 0	Max 0	Mean 0	Number of errors 100
+assignment_1:Exercises_1:1	Nominal - 
+	gain:	Yield	0%
+		Min 0	Max 0	Mean 0	Number of errors 100
+
+assignment_1:Exercises_1:1
+	Overall Yield	100%	Number of points passed	100	Total number of points	100
+
+Estimated yield = 100% (100/100), 100 errors
+Estimated yield (No opregions) = 100% (100/100)

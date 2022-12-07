@@ -1,0 +1,168 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Dec  5 18:38:54 2022 
+Best design point: 1
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		2	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		10K
+
+Best design point: 2
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		3.527	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		25.26K
+
+Best design point: 3
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		5.053	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		40.53K
+
+Best design point: 4
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		6.578	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		55.79K
+
+Best design point: 5
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		8.104	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		71.05K
+
+Best design point: 6
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		9.63	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		86.32K
+
+Best design point: 7
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		11.15	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		101.6K
+
+Best design point: 8
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		12.68	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		116.8K
+
+Best design point: 9
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		14.2	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		132.1K
+
+Best design point: 10
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		15.73	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		147.4K
+
+Best design point: 11
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		17.25	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		162.6K
+
+Best design point: 12
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		18.78	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		177.9K
+
+Best design point: 13
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		20.3	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		193.2K
+
+Best design point: 14
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		21.83	No
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		208.4K
+
+Best design point: 15
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		23.35	Near
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		223.7K
+
+Best design point: 16
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		24.87	Yes
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		238.9K
+
+Interactive.1
+Number of points completed: 20
+Number of simulation errors: 20
+Interactive.1 completed. 
+Current time: Mon Dec  5 18:40:13 2022 

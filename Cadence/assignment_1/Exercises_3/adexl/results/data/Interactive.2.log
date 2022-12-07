@@ -1,0 +1,18 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Dec  5 18:41:26 2022 
+Best design point: 1
+Design specs: 
+	assignment_1:Exercises_3:1	corner	Nominal - 
+	DC gain		Error	No
+	tran gain		24.87	Yes
+Design parameters: 
+	f		1K
+	bias		1.65
+	r		238.9K
+
+Interactive.2
+Number of points completed: 20
+Number of simulation errors: 20
+Interactive.2 completed. 
+Current time: Mon Dec  5 18:42:51 2022 
