@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Direction"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="109dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:text="Counter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/compass"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/compass" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="105dp"
+        android:layout_height="36dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="75dp"
+        android:onClick="resetCounter"
+        android:text="Reset Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_degree"
+        app:srcCompat="@drawable/mark" />
+
+    <TextView
+        android:id="@+id/tv_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Degree"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_direction" />
+
+    <ImageView
+        android:id="@+id/signalQuality"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red" />
+
+    <LinearLayout
+        android:layout_width="168dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/signalQuality"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/extraMagnitudeError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="extraMagnitudeError"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/degreeDoubleCheckError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="degreeDoubleCheckError"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/gyroscope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/magnitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/accelerator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="317dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compass">
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/eastName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="East" />
+
+            <TextView
+                android:id="@+id/east"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/eastSouthName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="EastSouth" />
+
+            <TextView
+                android:id="@+id/eastSouth"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/southName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="South" />
+
+            <TextView
+                android:id="@+id/south"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/southWestName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="SouthWest" />
+
+            <TextView
+                android:id="@+id/southWest"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/westName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="West" />
+
+            <TextView
+                android:id="@+id/west"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/westNorthName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="WestNorth" />
+
+            <TextView
+                android:id="@+id/westNorth"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/northName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="North" />
+
+            <TextView
+                android:id="@+id/north"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/northEastName"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="NorthEast" />
+
+            <TextView
+                android:id="@+id/northEast"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="TextView" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/freezeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FF0000"
+        android:text="Please Check Nearby Environment For Best Measurement"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/compass"
+        app:layout_constraintEnd_toEndOf="@+id/compass"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/compass" />
+
+    <ImageView
+        android:id="@+id/selectMethod"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/compass"
+        app:srcCompat="@drawable/auto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
