@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">EWireless</string>
+    <string name="EMF_message">EMF:</string>
+    <string name="Acc">Accelerometer:</string>
+    <string name="Acc_X">Acc_Xaxis:</string>
+    <string name="Acc_Y">Acc_Yaxis:</string>
+    <string name="Acc_Z">Acc_Zaxis:</string>
+    <string name="Acc_power">Acc power:</string>
+    <string name="Mag_X">Mag_Xaxis: </string>
+    <string name="Mag_Y">Mag_Yaxis: </string>
+    <string name="Mag_Z">Mag_Zaxis: </string>
+    <string name="Mag_power">Mag power:</string>
+    <string name="Mag_Field">magnetic_field:</string>
+    <string name="Gyro">Gyroscope:</string>
+    <string name="Gyro_X">Gyro_Xaxis:</string>
+    <string name="Gyro_Y">Gyro_Yaxis:</string>
+    <string name="Gyro_Z">Gyro_Zaxis:</string>
+    <string name="Gyro_power">Gyro power:</string>
+    <string name="Location">Location:</string>
+    <string name="Latitude">Latitude:</string>
+    <string name="Longitude">Latitude:</string>
+    <string name="Others">Others:</string>
+    <string name="Light">Light:</string>
+    <string name="Light_power">Light power:</string>
+    <string name="Altitude">Altitude:</string>
+    <string name="Altitude_power">Altitude power:</string>
+    <string name="Test">Test:</string>
+    <string name="Info_page">Info page</string>
+    <string name="Open_Map">Open Map</string>
+    <string name="Step_count">Steps: 0.00</string>
+    <string name="title_activity_maps">MapActivity</string>
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Yaw"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:text="Yaw: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/XYchart" />
+
+    <TextView
+        android:id="@+id/Roll"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="33dp"
+        android:text="Roll:"
+        app:layout_constraintStart_toEndOf="@+id/Pitch"
+        app:layout_constraintTop_toBottomOf="@+id/XYchart" />
+
+    <TextView
+        android:id="@+id/Pitch"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="33dp"
+        android:text="Pitch: "
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/Yaw"
+        app:layout_constraintTop_toBottomOf="@+id/XYchart"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/StepCount"
+        android:layout_width="109dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Step_count"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Yaw"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/recordTimer"
+        android:layout_width="178dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="108dp"
+        android:text="00 : 00 : 000"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StepCount" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClick"
+        android:text="@string/Info_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/map_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickMap"
+        android:text="@string/Open_Map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/TRAJECTORY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:onClick="onTrajectoryClick"
+        android:text="START RECORD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordTimer" />
+
+    <ImageView
+        android:id="@+id/loadFile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/load" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/Zchart"
+        android:layout_width="357dp"
+        android:layout_height="190dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/XYchart"
+        app:layout_constraintTop_toTopOf="@+id/XYchart" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/XYchart"
+        android:layout_width="357dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/change_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/Zchart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/change_label" />
+
+    <TextView
+        android:id="@+id/total_distance"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Distance: 0"
+        app:layout_constraintStart_toEndOf="@+id/StepCount"
+        app:layout_constraintTop_toBottomOf="@+id/Roll" />
+
+    <ImageView
+        android:id="@+id/wifiImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/red_wifi_label" />
+
+    <ImageView
+        android:id="@+id/downloadImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/loadFile_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/download_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
