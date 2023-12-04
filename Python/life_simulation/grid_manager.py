@@ -1,0 +1,5 @@
+#方格设置
+GRID_SIZE = 5
+GRID_GAP = 1
+ROWS = 80
+COLS = 80
