@@ -1,7 +1,7 @@
 import sys
 import pygame as game
 import mouse_saver as mouse
-import grid_manager as grid
+import grid.grid_manager as grid
 
 #全局变量
 WIDTH = grid.ROWS * (grid.GRID_SIZE + grid.GRID_GAP) + grid.GRID_GAP
@@ -37,17 +37,18 @@ while is_running:
                 #左键
                 if (event.button == 1):
                     mouse.button_left = True
+                    grid.click_grid()
                 #右键
                 elif (event.button == 3):
                     mouse.button_right = True
                 #滚轮向上
                 elif (event.button == 4):
                     #放大
-                    grid.zoom_in(1)
+                    grid.zoom_in(2)
                 #滚轮向下
                 elif (event.button == 5):
                     #缩小
-                    grid.zoom_out(1)
+                    grid.zoom_out(2)
 
             #检测到鼠标松开
             elif event.type == game.MOUSEBUTTONUP:
@@ -73,5 +74,5 @@ while is_running:
 
 #卸载模块
 game.quit()
-#推出程序
+#结束程序
 sys.exit()
