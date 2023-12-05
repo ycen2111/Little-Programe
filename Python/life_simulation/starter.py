@@ -1,20 +1,28 @@
 import sys
 import pygame as game
-import mouse_saver as mouse
-import grid.grid_manager as grid
+import mouse_conition as mouse
+import grid_info.grid as grid
 
 #全局变量
-WIDTH = grid.ROWS * (grid.GRID_SIZE + grid.GRID_GAP) + grid.GRID_GAP
-HEIGHT = grid.COLS * (grid.GRID_SIZE + grid.GRID_GAP) + grid.GRID_GAP
+WIDTH = grid.ROWS * (grid.grid_coordinary.GRID_SIZE + grid.grid_coordinary.GRID_GAP) + grid.grid_coordinary.GRID_GAP
+GRID_HEIGHT = grid.COLS * (grid.grid_coordinary.GRID_SIZE + grid.grid_coordinary.GRID_GAP) + grid.grid_coordinary.GRID_GAP
+MENU_HEIGHT = 30
 TITLE = "Test"
+
 
 #游戏初始化
 game.init()
 is_running = True
 
-#界面设置
+#界面大小设置
 game.display.set_caption(TITLE)
-screen = game.display.set_mode((WIDTH,HEIGHT))
+screen = game.display.set_mode((WIDTH,GRID_HEIGHT + MENU_HEIGHT))
+#方格界面设置
+menu_surface = game.Surface((WIDTH,MENU_HEIGHT))
+menu_surface.fill(grid.grid_color.LIGHT_GREY)
+screen.blit(menu_surface, (0,0))
+grid_surface = game.Surface((WIDTH,GRID_HEIGHT))
+grid_surface.fill(grid.grid_color.LIGHT_GREY)
 
 #初始化方格颜色和数量
 grid.init()
@@ -22,7 +30,7 @@ grid.init()
 #开始
 while is_running:
     #设置界面底色
-    screen.fill(grid.WHITE)
+    grid_surface.fill(grid.grid_color.LIGHT_GREY)
 
     #监控用户事件
     for event in game.event.get():
@@ -44,11 +52,11 @@ while is_running:
                 #滚轮向上
                 elif (event.button == 4):
                     #放大
-                    grid.zoom_in(2)
+                    grid.grid_coordinary.zoom_in(2)
                 #滚轮向下
                 elif (event.button == 5):
                     #缩小
-                    grid.zoom_out(2)
+                    grid.grid_coordinary.zoom_out(2)
 
             #检测到鼠标松开
             elif event.type == game.MOUSEBUTTONUP:
@@ -62,12 +70,13 @@ while is_running:
                     #得到鼠标移动距离
                     distance = mouse.get_moving_distance()
                     #移动方格位置
-                    grid.move(distance[0], distance[1])
+                    grid.grid_coordinary.move(distance[0], distance[1])
     
     #将方格画到界面上
-    for y, row in enumerate(grid.grid_rects):
+    for y, row in enumerate(grid.get_grid_coordinary()):
         for x, rect in enumerate(row):
-            game.draw.rect(screen, grid.grid_color[y][x], rect)
+            game.draw.rect(grid_surface, grid.get_grid_color(y, x), rect)
+    screen.blit(grid_surface, (0,MENU_HEIGHT))
 
     #刷新屏幕
     game.display.flip()

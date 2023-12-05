@@ -1,33 +1,17 @@
-import pygame as game
+#控制方格位置坐标
 
+import pygame as game
 #方格初始设置
 GRID_SIZE = 5
 GRID_GAP = 1
-ROWS = 80
-COLS = 80
-
-BLACK = (0,0,0)
-WHITE = (255,255,255)
-GREY = (100,100,100)
-RED = (255,0,0)
-GREEN = (0,255,0)
-BLUE = (0,0,255)
-
-#记录方格颜色
-grid_color = []
 #记录方格位置和尺寸
 grid_rects = []
 
-#初始化矩阵，定义方格颜色和位置
-def init():
-    global grid_color, grid_rects
-    #初始化方格颜色
-    grid_color = [[GREY for _ in range(COLS)] for _ in range(ROWS)]
-
-    #方格的位置和尺寸定义
-    for y in range(ROWS):
+#方格的位置和尺寸定义
+def init(cols, rows):
+    for y in range(rows):
         row = []
-        for x in range(COLS):
+        for x in range(cols):
             #pygame.Rect(x_position, y_position, width, length)
             rect = game.Rect(x * (GRID_SIZE + GRID_GAP) + GRID_GAP, y * (GRID_SIZE + GRID_GAP) + GRID_GAP, GRID_SIZE, GRID_SIZE)
             row.append(rect)
@@ -40,20 +24,15 @@ def move(shift_x, shift_y):
             rect.x += shift_x
             rect.y += shift_y
 
-#点击方格变色
-def click_grid():
+#查找鼠标位置的方格的坐标
+def find_grid():
     #读取鼠标位置
     coordinary = game.mouse.get_pos()
     #计算方格坐标
     grid_y = int (abs(coordinary[1] - grid_rects[0][0].y) / (GRID_SIZE + GRID_GAP))
     grid_x = int (abs(coordinary[0] - grid_rects[0][0].x) / (GRID_SIZE + GRID_GAP))
-    #检查是否点击了方格
-    if (grid_x < ROWS and grid_y < COLS):
-        #切换颜色
-        if (grid_color[grid_y][grid_x] == GREY):
-            grid_color[grid_y][grid_x] = GREEN
-        else:
-            grid_color[grid_y][grid_x] = GREY
+    
+    return grid_y, grid_x
 
 #以鼠标坐标为中心放大方格
 def zoom_in(zoom_size):
