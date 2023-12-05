@@ -1,6 +1,7 @@
 import sys
 import pygame as game
 import mouse_saver as mouse
+import grid_manager as grid
 
 #全局变量
 GRID_SIZE = 5
@@ -8,8 +9,8 @@ GRID_GAP = int (GRID_SIZE/5)
 ROWS = 80
 COLS = 80
 
-WIDTH = ROWS * (GRID_SIZE + GRID_GAP) + GRID_GAP
-HEIGHT = COLS * (GRID_SIZE + GRID_GAP) + GRID_GAP
+WIDTH = grid.ROWS * (grid.GRID_SIZE + grid.GRID_GAP) + grid.GRID_GAP
+HEIGHT = grid.COLS * (grid.GRID_SIZE + grid.GRID_GAP) + grid.GRID_GAP
 TITLE = "Test"
 BLACK = (0,0,0)
 WHITE = (255,255,255)
@@ -58,46 +59,48 @@ while is_running:
                 elif (event.button == 3):
                     mouse.button_right = True
                 #滚轮向上
-                if (event.button == 4):
+                elif (event.button == 4):
                     #加边长
-                    size_diff = int (GRID_SIZE * 0.1) + 1 # +1防止GRID_SIZE太小时size_diff无法变化
-                    GRID_SIZE += size_diff
+                    GRID_SIZE += 1
                     #计算新边距
                     new_grid_gap = int (GRID_SIZE/5)
                     gap_diff = new_grid_gap - GRID_GAP
                     GRID_GAP = new_grid_gap
 
-                    total_diff = size_diff + gap_diff
-                    #读取鼠标位置
+                    total_diff = 1 + gap_diff
+                    #读取鼠标位置，计算偏移量
                     coordinary = game.mouse.get_pos()
+                    dx = int (abs(coordinary[1] - grid_rects[0][0].x) / (GRID_SIZE + GRID_GAP)) * total_diff
+                    dy = int (abs(coordinary[0] - grid_rects[0][0].y)/ (GRID_SIZE + GRID_GAP)) * total_diff
                     #移动方格位置
                     for x, row in enumerate(grid_rects):
                         for y, rect in enumerate(row):
                             rect.width = GRID_SIZE
                             rect.height = GRID_SIZE
-                            rect.x += y * total_diff - int (coordinary[1] * 0.2)
-                            rect.y += x * total_diff - int (coordinary[0] * 0.2)
+                            rect.x += y * total_diff - dx
+                            rect.y += x * total_diff - dy
                 #滚轮向下
                 elif (event.button == 5 and GRID_SIZE != 1):
                     #减边长
-                    size_diff = int (GRID_SIZE * 0.1) + 1 # +1防止GRID_SIZE太小时size_diff无法变化
-                    GRID_SIZE -= size_diff
+                    GRID_SIZE -= 1
                     #计算新边距
                     new_grid_gap = int (GRID_SIZE/5)
                     gap_diff = GRID_GAP - new_grid_gap
                     GRID_GAP = new_grid_gap
 
-                    total_diff = size_diff + gap_diff
+                    total_diff = 1 + gap_diff
                     #读取鼠标位置
                     coordinary = game.mouse.get_pos()
+                    dx = int (abs(coordinary[1] - grid_rects[0][0].x) / (GRID_SIZE + GRID_GAP)) * total_diff
+                    dy = int (abs(coordinary[0] - grid_rects[0][0].y)/ (GRID_SIZE + GRID_GAP)) * total_diff
                     #移动方格位置
                     for x, row in enumerate(grid_rects):
                         for y, rect in enumerate(row):
                             rect.width = GRID_SIZE
                             rect.height = GRID_SIZE
-                            rect.x -= y * total_diff - int (coordinary[1] * 0.2)
-                            rect.y -= x * total_diff - int (coordinary[0] * 0.2)
-                    
+                            rect.x -= y * total_diff - int (coordinary[1] * 0) - dx
+                            rect.y -= x * total_diff - int (coordinary[0] * 0) - dy
+
             #检测到鼠标松开
             elif event.type == game.MOUSEBUTTONUP:
                 mouse.button_left = False

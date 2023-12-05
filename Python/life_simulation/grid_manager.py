@@ -1,4 +1,4 @@
-#方格设置
+#方格初始设置
 GRID_SIZE = 5
 GRID_GAP = 1
 ROWS = 80
