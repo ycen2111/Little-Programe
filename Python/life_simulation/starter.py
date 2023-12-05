@@ -1,27 +1,22 @@
 import sys
 import pygame as game
-import mouse_conition as mouse
+import region_manager as region
+import mouse_condition as mouse
 import grid_info.grid as grid
-
-#全局变量
-WIDTH = grid.ROWS * (grid.grid_coordinary.GRID_SIZE + grid.grid_coordinary.GRID_GAP) + grid.grid_coordinary.GRID_GAP
-GRID_HEIGHT = grid.COLS * (grid.grid_coordinary.GRID_SIZE + grid.grid_coordinary.GRID_GAP) + grid.grid_coordinary.GRID_GAP
-MENU_HEIGHT = 30
-TITLE = "Test"
-
 
 #游戏初始化
 game.init()
 is_running = True
 
 #界面大小设置
+TITLE = "Test"
 game.display.set_caption(TITLE)
-screen = game.display.set_mode((WIDTH,GRID_HEIGHT + MENU_HEIGHT))
+screen = game.display.set_mode((region.WIDTH,region.HEIGHT))
 #方格界面设置
-menu_surface = game.Surface((WIDTH,MENU_HEIGHT))
+menu_surface = game.Surface(region.get_menu_size())
 menu_surface.fill(grid.grid_color.LIGHT_GREY)
-screen.blit(menu_surface, (0,0))
-grid_surface = game.Surface((WIDTH,GRID_HEIGHT))
+screen.blit(menu_surface, region.get_menu_start_point())
+grid_surface = game.Surface(region.get_grid_size())
 grid_surface.fill(grid.grid_color.LIGHT_GREY)
 
 #初始化方格颜色和数量
@@ -41,7 +36,7 @@ while is_running:
         #其他事件
         else:
             #检测到鼠标按下或滚轮变化
-            if event.type == game.MOUSEBUTTONDOWN:
+            if (event.type == game.MOUSEBUTTONDOWN and region.in_grid_region(game.mouse.get_pos())):
                 #左键
                 if (event.button == 1):
                     mouse.button_left = True
@@ -59,12 +54,12 @@ while is_running:
                     grid.grid_coordinary.zoom_out(2)
 
             #检测到鼠标松开
-            elif event.type == game.MOUSEBUTTONUP:
+            elif (event.type == game.MOUSEBUTTONUP and region.in_grid_region(game.mouse.get_pos())):
                 mouse.button_left = False
                 mouse.button_right = False
 
             #检测到鼠标移动
-            if event.type == game.MOUSEMOTION:
+            if (event.type == game.MOUSEMOTION and region.in_grid_region(game.mouse.get_pos())):
                 mouse.save_coordinary(game.mouse.get_pos())
                 if (mouse.button_right):
                     #得到鼠标移动距离
@@ -76,7 +71,7 @@ while is_running:
     for y, row in enumerate(grid.get_grid_coordinary()):
         for x, rect in enumerate(row):
             game.draw.rect(grid_surface, grid.get_grid_color(y, x), rect)
-    screen.blit(grid_surface, (0,MENU_HEIGHT))
+    screen.blit(grid_surface, region.get_grid_start_point())
 
     #刷新屏幕
     game.display.flip()
