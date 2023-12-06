@@ -14,12 +14,12 @@ def init():
 #点击方格变色设置生命
 def click_grid():
     #查找方格坐标
-    grid_y, grid_x = grid_coordinary.find_grid()
+    grid_x, grid_y = grid_coordinary.find_grid()
     #检查坐标是否有效
     if (grid_x < config.ROWS and grid_y < config.COLS):
         if (not data.is_cell_alive(grid_x, grid_y)): #如果坐标没有存活cell
             #记录这个坐标
-            data.add_lived_cell(grid_x, grid_y)
+            data.add_lived_cell(grid_x, grid_y, code_id=1, start_step=0)
             print("1 cell added in (" + str(grid_x) + ", " + str(grid_y) + "), " + str(data.count_alive_cell()) + " total alive")
         else:
             #去除这个坐标

@@ -11,4 +11,4 @@ def init(cols, rows):
 
 #更改颜色
 def change_color(grid_x, grid_y, switched_color):
-    color[grid_y][grid_x] = switched_color
+    color[grid_x][grid_y] = switched_color
