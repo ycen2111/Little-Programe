@@ -1,8 +1,10 @@
-import parameter as data
+import config
 #记录元素位置和大小，判断当前鼠标所在的是哪个区域
 
-WIDTH = data.ROWS * (data.GRID_SIZE + data.GRID_GAP) + data.GRID_GAP
-GRID_HEIGHT = data.COLS * (data.GRID_SIZE + data.GRID_GAP) + data.GRID_GAP
+WIDTH = config.ROWS * (config.GRID_SIZE + config.GRID_GAP) + config.GRID_GAP
+GRID_WIDTH = WIDTH
+GRID_HEIGHT = config.COLS * (config.GRID_SIZE + config.GRID_GAP) + config.GRID_GAP
+MENU_WIDTH = WIDTH
 MENU_HEIGHT = 30
 HEIGHT = GRID_HEIGHT + MENU_HEIGHT
 #(start x, start y, stop x, stop y)

@@ -1,7 +1,9 @@
 import sys
 import pygame as game
+import config
 import region_manager as region
 import mouse_condition as mouse
+import button
 import grid_info.grid as grid
 
 #游戏初始化
@@ -12,12 +14,14 @@ is_running = True
 TITLE = "Test"
 game.display.set_caption(TITLE)
 screen = game.display.set_mode((region.WIDTH,region.HEIGHT))
-#方格界面设置
+#界面区域设置
 menu_surface = game.Surface(region.get_menu_size())
-menu_surface.fill(grid.grid_color.LIGHT_GREY)
-screen.blit(menu_surface, region.get_menu_start_point())
+menu_surface.fill(config.LIGHT_GREY)
 grid_surface = game.Surface(region.get_grid_size())
-grid_surface.fill(grid.grid_color.LIGHT_GREY)
+grid_surface.fill(config.LIGHT_GREY)
+#用button类设置界面按钮
+start_button = button.Button(region.get_menu_start_point(), (100, region.MENU_HEIGHT), "START", config.DELIGHT_GREY, menu_surface)
+start_button.draw()
 
 #初始化方格颜色和数量
 grid.init()
@@ -25,7 +29,7 @@ grid.init()
 #开始
 while is_running:
     #设置界面底色
-    grid_surface.fill(grid.grid_color.LIGHT_GREY)
+    grid_surface.fill(config.LIGHT_GREY)
 
     #监控用户事件
     for event in game.event.get():
@@ -59,18 +63,25 @@ while is_running:
                 mouse.button_right = False
 
             #检测到鼠标移动
-            if (event.type == game.MOUSEMOTION and region.in_grid_region(game.mouse.get_pos())):
+            if (event.type == game.MOUSEMOTION):
                 mouse.save_coordinary(game.mouse.get_pos())
+                #右键按住移动
                 if (mouse.button_right):
                     #得到鼠标移动距离
                     distance = mouse.get_moving_distance()
                     #移动方格位置
                     grid.grid_coordinary.move(distance[0], distance[1])
+                #鼠标在start按钮上
+                if (start_button.on_button()):
+                    start_button.change_color(config.WHITE)
+                else:
+                    start_button.change_color(config.DELIGHT_GREY)
     
     #将方格画到界面上
     for y, row in enumerate(grid.get_grid_coordinary()):
         for x, rect in enumerate(row):
             game.draw.rect(grid_surface, grid.get_grid_color(y, x), rect)
+    screen.blit(menu_surface, region.get_menu_start_point())
     screen.blit(grid_surface, region.get_grid_start_point())
 
     #刷新屏幕
