@@ -1,8 +1,12 @@
-#保存初始参数
+#初始界面参数
 GRID_SIZE = 5
 GRID_GAP = 1
 ROWS = 80
 COLS = 80
+
+#初始资源参数
+MATERIAL_NUM = 10
+ENERGY = 1
 
 #颜色定义
 BLACK = (0,0,0)

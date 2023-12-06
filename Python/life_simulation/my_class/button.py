@@ -30,8 +30,20 @@ class Button:
         self.color = color
         self.draw()
     
+    #更改文字
+    def change_text(self, text):
+        self.text = text
+        font = game.font.Font(None, 36)
+        self.text_surface = font.render(self.text, True, config.BLACK)
+        self.text_rect = self.text_surface.get_rect(center=self.rect.center)
+        self.draw()
+    
+    #返回文字
+    def get_text(self):
+        return self.text
+    
+    #判断鼠标在按钮上
     def on_button(self):
-        #判断鼠标在按钮上
         if self.rect.collidepoint(game.mouse.get_pos()):
             return True
         else:

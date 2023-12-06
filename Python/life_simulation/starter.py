@@ -3,8 +3,11 @@ import pygame as game
 import config
 import region_manager as region
 import mouse_condition as mouse
-import button
+import my_class.button as button
 import grid_info.grid as grid
+
+import game_data as data
+import my_logic.main as sim
 
 #游戏初始化
 game.init()
@@ -25,6 +28,8 @@ start_button.draw()
 
 #初始化方格颜色和数量
 grid.init()
+#初始化存储单元
+data.init()
 
 #开始
 while is_running:
@@ -40,20 +45,32 @@ while is_running:
         #其他事件
         else:
             #检测到鼠标按下或滚轮变化
-            if (event.type == game.MOUSEBUTTONDOWN and region.in_grid_region(game.mouse.get_pos())):
+            if (event.type == game.MOUSEBUTTONDOWN):
                 #左键
                 if (event.button == 1):
                     mouse.button_left = True
-                    grid.click_grid()
+                    #点击在grid_region区域
+                    if (region.in_grid_region(game.mouse.get_pos())):
+                        grid.click_grid()
+                    #点击在start按钮
+                    elif (start_button.on_button()):
+                        if (start_button.get_text() == "START"):
+                            #结束模拟
+                            start_button.change_text("STOP")
+                            sim.stop_sim()
+                        else:
+                            #开始模拟
+                            start_button.change_text("START")
+                            sim.start_sim()
                 #右键
                 elif (event.button == 3):
                     mouse.button_right = True
                 #滚轮向上
-                elif (event.button == 4):
+                elif (event.button == 4 and region.in_grid_region(game.mouse.get_pos())):
                     #放大
                     grid.grid_coordinary.zoom_in(2)
                 #滚轮向下
-                elif (event.button == 5):
+                elif (event.button == 5 and region.in_grid_region(game.mouse.get_pos())):
                     #缩小
                     grid.grid_coordinary.zoom_out(2)
 
@@ -66,7 +83,7 @@ while is_running:
             if (event.type == game.MOUSEMOTION):
                 mouse.save_coordinary(game.mouse.get_pos())
                 #右键按住移动
-                if (mouse.button_right):
+                if (mouse.button_right and region.in_grid_region(game.mouse.get_pos())):
                     #得到鼠标移动距离
                     distance = mouse.get_moving_distance()
                     #移动方格位置
@@ -78,9 +95,9 @@ while is_running:
                     start_button.change_color(config.DELIGHT_GREY)
     
     #将方格画到界面上
-    for y, row in enumerate(grid.get_grid_coordinary()):
-        for x, rect in enumerate(row):
-            game.draw.rect(grid_surface, grid.get_grid_color(y, x), rect)
+    for x, row in enumerate(grid.get_grid_coordinary()):
+        for y, rect in enumerate(row):
+            game.draw.rect(grid_surface, grid.get_grid_color(x, y), rect)
     screen.blit(menu_surface, region.get_menu_start_point())
     screen.blit(grid_surface, region.get_grid_start_point())
 
