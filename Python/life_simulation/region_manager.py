@@ -5,7 +5,9 @@ WIDTH = config.ROWS * (config.GRID_SIZE + config.GRID_GAP) + config.GRID_GAP
 GRID_WIDTH = WIDTH
 GRID_HEIGHT = config.COLS * (config.GRID_SIZE + config.GRID_GAP) + config.GRID_GAP
 MENU_WIDTH = WIDTH
-MENU_HEIGHT = 30
+MENU_HEIGHT = int (GRID_HEIGHT * 0.07)
+INFO_WIDTH = 100
+INFO_HEIGHT = 75
 HEIGHT = GRID_HEIGHT + MENU_HEIGHT
 #(start x, start y, stop x, stop y)
 MENU_AREA = (0,0,WIDTH,MENU_HEIGHT)
@@ -31,3 +33,6 @@ def in_grid_region(position):
         return True
     else:
         return False
+
+def get_info_size():
+    return (INFO_WIDTH,INFO_HEIGHT)

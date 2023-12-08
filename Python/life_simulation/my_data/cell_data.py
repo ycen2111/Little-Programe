@@ -37,3 +37,16 @@ def remove_lived_cell(x, y):
     global lived_cell
     del lived_cell[x, y]
     color.change_color(x, y, config.GREY)
+
+#返回String格式信息
+def get_string_info(x, y):
+    global material, lived_cell
+    info = []
+    info.append("X: " + str(x) + "  Y: " + str(y))
+    info.append("Env_mate: " + str(material[x, y]))
+    info.append("Code_id: " + str(lived_cell[x, y].code_id))
+    info.append("Curr_step: " + str(lived_cell[x, y].curr_step))
+    info.append("Age: " + str(lived_cell[x, y].age))
+    info.append("Own_mate: " + str(lived_cell[x, y].material))
+    info.append("Own_ener: " + str(lived_cell[x, y].energy))
+    return info

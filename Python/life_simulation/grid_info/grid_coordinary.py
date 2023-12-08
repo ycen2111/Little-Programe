@@ -32,10 +32,11 @@ def find_grid():
     mouse_y = coordinary[1] - grid_start_point[1]
     mouse_x = coordinary[0] - grid_start_point[0]
     #计算方格坐标
-    grid_y = int (abs(mouse_y - grid_rects[0][0].y) / (config.GRID_SIZE + config.GRID_GAP))
-    grid_x = int (abs(mouse_x - grid_rects[0][0].x) / (config.GRID_SIZE + config.GRID_GAP))
+    cell_unit = config.GRID_SIZE + config.GRID_GAP
+    grid_y = int (abs(mouse_y - grid_rects[0][0].y) / cell_unit)
+    grid_x = int (abs(mouse_x - grid_rects[0][0].x) / cell_unit)
     
-    return grid_y, grid_x
+    return grid_x, grid_y
 
 #以鼠标坐标为中心放大方格
 def zoom_in(zoom_size):

@@ -2,7 +2,7 @@ import config
 import grid_info.grid_color as grid_color
 import grid_info.grid_coordinary as grid_coordinary
 
-import game_data as data
+import my_data.cell_data as data
 
 #初始化所有方格数据
 def init():
@@ -14,7 +14,7 @@ def init():
 #点击方格变色设置生命
 def click_grid():
     #查找方格坐标
-    grid_x, grid_y = grid_coordinary.find_grid()
+    grid_x, grid_y = find_grid()
     #检查坐标是否有效
     if (grid_x < config.ROWS and grid_y < config.COLS):
         if (not data.is_cell_alive(grid_x, grid_y)): #如果坐标没有存活cell
@@ -33,3 +33,6 @@ def get_grid_color(x, y):
 #返回所有方格坐标数据
 def get_grid_coordinary():
     return grid_coordinary.grid_rects
+
+def find_grid():
+    return grid_coordinary.find_grid()

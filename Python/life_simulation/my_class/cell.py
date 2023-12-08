@@ -6,5 +6,6 @@ class Cell:
         self.y = y
         self.code_id = code_id
         self.curr_step = start_step
+        self.age = 0
         self.energy = 0
         self.material = 0
